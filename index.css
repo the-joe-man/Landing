@@ -1,0 +1,192 @@
+/* -------- TIPOGRAFÍAS -------- */
+@font-face {
+  font-family: 'FuturaPTLight';
+  src: url('FuturaPTLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaPTDemi';
+  src: url('FuturaPTDemi.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'FuturaPTLightOblique';
+  src: url('FuturaPTLightOblique.otf') format('opentype');
+  font-weight: 300;
+  font-style: oblique;
+}
+
+:root {
+  --main-font: 'FuturaPTLight', Arial, sans-serif;
+  --accent-font: 'FuturaPTDemi', Arial, sans-serif;
+  --oblique-font: 'FuturaPTLightOblique', Arial, sans-serif;
+
+  --fondo: rgb(66, 64, 62);
+  --blanco: #fff;
+  --gris: #eaeaea;
+  --gris-oscuro: #222;
+  --verde: #19c37d;
+}
+
+html, body {
+  min-height: 100vh;
+  background: var(--fondo);
+  color: var(--blanco);
+  font-family: var(--main-font);
+}
+
+.main-section {
+  min-height: 100vh;
+  width: 20vw;
+  max-width: 900px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.logo {
+  width: 160px;
+  max-width: 35vw;
+  margin-top: 8px;      /* Espacio arriba del logo */
+  margin-bottom: 15px;   /* Espacio abajo del logo */
+  display: block;
+  display: block;
+}
+
+.titulo-contacto {
+  font-family: var(--accent-font);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin: 0 0 0.7rem 0;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 1rem;
+  max-width: 33ch;
+  margin: 0 0 2.3rem 0;
+  font-family: var(--main-font);
+  text-align: center;
+  line-height: 1.5;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(20,20,20,0.60);
+  padding: 2rem 1.7rem 1.4rem 1.7rem;
+  border-radius: 18px;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.row {
+  display: flex;
+  gap: 1rem;
+}
+
+.row input {
+  width: 100%;
+}
+
+input,
+textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid var(--blanco);
+  color: var(--blanco);
+  font-size: 1rem;
+  font-family: var(--main-font);
+  padding: 0.85rem 0;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  border-bottom: 1.7px solid var(--verde);
+}
+
+textarea {
+  resize: vertical;
+  min-height: 90px;
+}
+
+button {
+  margin-top: 0.4rem;
+  width: 100%;
+  padding: 1rem 0;
+  background: var(--blanco);
+  color: var(--fondo);
+  border: none;
+  border-radius: 8px;
+  font-family: var(--accent-font);
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.07em;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+button:hover {
+  background: var(--verde);
+  color: #fff;
+}
+
+.social-links {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 2.5rem;
+  justify-content: center;
+}
+
+.social-links a {
+  color: #fff;
+  font-size: 2.2rem;
+  transition: transform 0.25s, color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none; /* Quita el subrayado a los íconos */
+}
+
+.social-links a:hover {
+  color: var(--verde);
+  transform: scale(1.14);
+}
+
+@media (max-width: 600px) {
+  .main-section {
+    padding-top: 16vw;
+    padding-bottom: 16vw;
+  }
+  form {
+    padding: 1.1rem 0.7rem 1.0rem 0.7rem;
+    max-width: 98vw;
+  }
+  .titulo-contacto {
+    font-size: 1.5rem;
+  }
+  .logo {
+    width: 160px;
+  margin-top: 8px;      /* Espacio arriba en móvil */
+  margin-bottom: 12px;   /* Espacio abajo en móvil */
+  }
+  .social-links {
+    gap: 1.5rem;
+  }
+  .row {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+}
