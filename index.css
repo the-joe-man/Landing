@@ -171,10 +171,15 @@ button:hover {
     padding-bottom: 16vw;
     width: 98vw;        /* <-- Agrega aquí */
     max-width: 100vw;   /* <-- Agrega aquí */
+    padding-left: 2vw;
+    padding-right: 2vw;
   }
   form {
-    padding: 1.1rem 0.7rem 1.0rem 0.7rem;
+    padding: 1.1rem 0.2rem 1.0rem 0.2rem;
     max-width: 98vw;
+  }
+    .subtitle {
+    max-width: 95vw;
   }
   .titulo-contacto {
     font-size: 1.5rem;
