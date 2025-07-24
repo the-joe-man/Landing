@@ -39,7 +39,8 @@ html, body {
 
 .main-section {
   min-height: 100vh;
-  width: 90vw;
+  min-width: 280px;   /* Elige el mínimo que prefieras */
+  width: 280px;
   max-width: 400px;
   margin: 0 auto;
   display: flex;
@@ -79,6 +80,7 @@ html, body {
 
 form {
   width: 100%;
+  min-width: 280px;   /* Igual que arriba */
   max-width: 400px;
   background: rgba(20,20,20,0.60);
   padding: 2rem 1.7rem 1.4rem 1.7rem;
@@ -169,17 +171,27 @@ button:hover {
   .main-section {
     padding-top: 8vw;
     padding-bottom: 8vw;
-    width: 98vw;        /* <-- Agrega aquí */
+    min-width: 280px;   /* Elige el mínimo que prefieras */
     max-width: 400px;   /* <-- Igual que desktop, nunca será más ancho */
     padding-left: 2vw;
     padding-right: 2vw;
   }
   form {
-    padding: 1.1rem 0.4rem 1.0rem 0.4rem;
-    max-width: 400px;   /* <-- Igual que desktop */
+   width: 100%;
+  min-width: 280px;   /* Igual que arriba */
+  max-width: 400px;
+  background: rgba(20,20,20,0.60);
+  padding: 2rem 1.7rem 1.4rem 1.7rem;
+  border-radius: 18px;
+  margin-bottom: 2rem;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.09);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
   }
     .subtitle {
-    max-width: 95vw;
+    min-width: 280px;   /* Elige el mínimo que prefieras */
+    max-width: 400px;   /* <-- Igual que desktop */
   }
   .titulo-contacto {
     font-size: 1.5rem;
