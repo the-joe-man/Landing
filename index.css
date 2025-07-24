@@ -169,6 +169,8 @@ button:hover {
   .main-section {
     padding-top: 16vw;
     padding-bottom: 16vw;
+    width: 98vw;        /* <-- Agrega aquí */
+    max-width: 100vw;   /* <-- Agrega aquí */
   }
   form {
     padding: 1.1rem 0.7rem 1.0rem 0.7rem;
