@@ -208,4 +208,9 @@ button:hover {
     flex-direction: column;
     gap: 0.7rem;
   }
+  .estado {
+  margin-top: 0.8rem;       /* separa el texto del botón */
+  font-size: 0.95rem;       /* tamaño legible, pero discreto */
+  text-align: center;       /* centrado en el formulario */
+  color: #19c37d;           /* verde: ¡enviado con éxito! */
 }
