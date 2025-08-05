@@ -5,30 +5,29 @@
 
 console.log("Landing cargada");
 
-// Ejemplo opcional para manejar el formulario sin redirección
-// (Requiere sustituir la URL de Formspree o tu backend)
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contact-form");
 
-/*
-const form = document.querySelector('form');
-form.addEventListener('submit', async (e) => {
-  e.preventDefault();
-  const data = new FormData(form);
-  try {
-    const response = await fetch(form.action, {
-      method: 'POST',
-      body: data,
-      headers: {
-        'Accept': 'application/json'
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();                  // evita el comportamiento por defecto
+    const datos = new FormData(form);
+
+    try {
+      const resp = await fetch(form.action, {
+        method: "POST",
+        body: datos,
+        headers: { Accept: "application/json" },
+      });
+
+      if (resp.ok) {
+        form.reset();
+        alert("Gracias por escribirnos, muy pronto te contactaremos");
+      } else {
+        alert("Hubo un problema al enviar el mensaje. Inténtalo de nuevo.");
       }
-    });
-    if (response.ok) {
-      alert('Mensaje enviado correctamente');
-      form.reset();
-    } else {
-      alert('Hubo un problema al enviar el mensaje');
+    } catch (err) {
+      alert("Error de red: " + err.message);
     }
-  } catch (err) {
-    alert('Error de red: ' + err.message);
-  }
+  });
 });
 */
