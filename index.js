@@ -5,29 +5,31 @@
 
 console.log("Landing cargada");
 
-document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("contact-form");
+const form   = document.querySelector('form');      // o  document.getElementById('contact-form')
+const estado = document.getElementById('estado');   // <p> donde aparecerá el mensaje
 
-  form.addEventListener("submit", async (e) => {
-    e.preventDefault();                  // evita el comportamiento por defecto
-    const datos = new FormData(form);
+form.addEventListener('submit', async (e) => {
+  e.preventDefault();                       // 1️⃣ detiene la redirección
+  const datos = new FormData(form);
 
-    try {
-      const resp = await fetch(form.action, {
-        method: "POST",
-        body: datos,
-        headers: { Accept: "application/json" },
-      });
+  try {
+    const resp = await fetch(form.action, {  // 2️⃣ envía a Formspree vía fetch
+      method: 'POST',
+      body:   datos,
+      headers:{ Accept:'application/json' }
+    });
 
-      if (resp.ok) {
-        form.reset();
-        alert("Gracias por escribirnos, muy pronto te contactaremos");
-      } else {
-        alert("Hubo un problema al enviar el mensaje. Inténtalo de nuevo.");
-      }
-    } catch (err) {
-      alert("Error de red: " + err.message);
+    if (resp.ok) {                          // 3️⃣ feedback al usuario
+      form.reset();
+      estado.textContent = '¡Muchas gracias! Muy pronto te contactaremos.';
+      estado.style.color = '#19c37d';
+    } else {
+      estado.textContent = 'No se pudo enviar. Intenta de nuevo.';
+      estado.style.color = '#f54545';
     }
-  });
+  } catch (err) {
+    estado.textContent = 'Error de red: ' + err.message;
+    estado.style.color = '#f54545';
+  }
 });
 */
