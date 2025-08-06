@@ -213,4 +213,12 @@ button:hover {
   font-size: 0.95rem;       /* tamaño legible, pero discreto */
   text-align: center;       /* centrado en el formulario */
   color: #19c37d;           /* verde: ¡enviado con éxito! */
+  }  
+  /* ---- Mensaje “Muchas gracias” ---- */
+.gracias {
+  display: none;               /* oculto por defecto  */
+  text-align: center;
+  color: #19c37d;              /* verde éxito         */
+  margin-top: .8rem;
+}
 }
