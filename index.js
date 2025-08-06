@@ -22,7 +22,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (resp.ok) {                                        // 3️⃣ Feedback al usuario
         form.reset();
-        estado.textContent = "¡Muchas gracias! Muy pronto te contactaremos.";
+        estado.textContent = "¡Enviado! 
+        Muy pronto te contactaremos.";
         estado.style.color = "#19c37d";
 
         // — opcional — reemplazar formulario por mensaje grande
