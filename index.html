@@ -3,35 +3,65 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Propiedades Quillay - Contacto</title>
+    <title>Propiedades Quillay – Contacto</title>
+
     <!-- Font Awesome para íconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="index.css" />
+
+    <!-- Estilos mínimos para el mensaje de “gracias”  -->
+    <style>
+      .gracias {
+        display: none;              /* oculto por defecto */
+        text-align: center;
+        color: #19c37d;             /* verde éxito */
+        margin-top: 0.8rem;
+      }
+      #gracias:target {
+        display: block;             /* se muestra si la URL termina en #gracias */
+      }
+    </style>
   </head>
   <body>
     <section class="main-section">
       <img src="Logo-Web.webp" alt="Logo Propiedades Quillay" class="logo" />
+
       <h2 class="titulo-contacto">CONTÁCTANOS</h2>
+
       <p class="subtitle">
-        ¿Quieres que trabajemos juntos?<br>
-        Revisemos tu propiedad,<br>
-        estamos aquí para ayudarte,<br>
-        y resolver todas tus dudas.<br>
+        ¿Quieres que trabajemos juntos?<br />
+        Revisemos tu propiedad,<br />
+        estamos aquí para ayudarte,<br />
+        y resolver todas tus dudas.<br />
       </p>
-      <form action="https://formspree.io//f/mrblyoyw" method="POST">
+
+      <!--————————————  FORMULARIO  ————————————-->
+      <form action="https://formspree.io/f/mrblyoyw" method="POST">
         <div class="row">
-          <input type="text" name="nombre" placeholder="Nombre" required />
-          <input type="text" name="apellido" placeholder="Apellido" required />
+          <input type="text" name="nombre"   placeholder="Nombre"            required />
+          <input type="text" name="apellido" placeholder="Apellido"          required />
         </div>
-        <input type="email" name="correo" placeholder="Correo Electrónico" required />
+
+        <input type="email" name="correo"    placeholder="Correo Electrónico" required />
         <textarea name="mensaje" placeholder="Mensaje" rows="4" required></textarea>
-        <input type="hidden" name="_next" value="./#gracias">
+
+        <!--  🔑 redirección a tu propia página con el ancla #gracias  -->
+        <input type="hidden" name="_next" value="https://propiedadesquillay.cl/#gracias" />
+
         <button type="submit">ENVIAR</button>
+
+        <!--  Puedes eliminar este <p> si ya no usas JavaScript para estados  -->
         <p id="estado" class="estado" aria-live="polite"></p>
       </form>
+
+      <!--  Mensaje que se mostrará después del envío  -->
       <p id="gracias" class="gracias">
-      ¡Muchas gracias! Muy pronto te contactaremos.
+        ¡Muchas gracias! Muy pronto te contactaremos.
       </p>
+
+      <!--——————————  REDES SOCIALES  ——————————-->
       <div class="social-links">
         <a href="https://www.instagram.com/tu_usuario" target="_blank" aria-label="Instagram">
           <i class="fab fa-instagram"></i>
@@ -44,6 +74,10 @@
         </a>
       </div>
     </section>
+
+    <!--  Tu script (opcional). Si no lo necesitas para estados, puedes omitirlo  -->
     <script src="index.js"></script>
   </body>
+</html>
+
 </html>
