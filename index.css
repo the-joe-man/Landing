@@ -221,4 +221,8 @@ button:hover {
   color: #19c37d;              /* verde éxito         */
   margin-top: .8rem;
 }
+
+#gracias:target {
+  display: block;              /* se muestra si la URL termina en #gracias */
+}
 }
